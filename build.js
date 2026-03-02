@@ -5,11 +5,11 @@ const path = require('path');
 const scriptPath = path.join(__dirname, 'script.js');
 let scriptContent = fs.readFileSync(scriptPath, 'utf8');
 
-// Replace the API key with environment variable
+// Replace the placeholder API key with environment variable
 const apiKey = process.env.VITE_WEATHER_API_KEY;
 if (apiKey) {
   scriptContent = scriptContent.replace(
-    /const API_KEY = '.*';/,
+    /const API_KEY = 'YOUR_API_KEY_HERE';/,
     `const API_KEY = '${apiKey}';`
   );
   console.log('API key injected successfully');
