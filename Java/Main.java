@@ -8,7 +8,7 @@ public class Main {
         case 1:
           System.out.println("Monday");
           break;
-        case 2:
+        case 2: 
           System.out.println("Tuesday");
           break;
         case 3:
